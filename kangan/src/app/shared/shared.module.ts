@@ -12,31 +12,27 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ShellComponent } from './shell/shell.component';
+import { ShellComponent } from "./shell/shell.component";
 
+const components = [ShellComponent];
 
+const modules = [CommonModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatSnackBarModule,
+  MatListModule,
+  MatMenuModule,
+  RouterModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatIconModule,
+  LayoutModule,
+  MatSidenavModule];
 
 @NgModule({
-  declarations: [
-    ShellComponent
-  ],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatSnackBarModule,
-    MatListModule,
-    MatMenuModule,
-    RouterModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    LayoutModule,
-    MatSidenavModule
-  ],
-  exports: [
-    ShellComponent
-  ]
+  declarations: [...components],
+  imports: [...modules],
+  exports : [...components,...modules]
 })
 export class SharedModule { }
