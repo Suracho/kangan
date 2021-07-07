@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "testing-another-nuts": {
+      "hosting": {
+        "kangan": [
+          "testing-another-nuts"
+        ]
+      }
+    }
+  }
+}
