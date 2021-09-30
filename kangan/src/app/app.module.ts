@@ -10,12 +10,13 @@ import { environment } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,8 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
